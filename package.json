@@ -1,7 +1,7 @@
 {
-  "name": "starting-point",
-  "description": "Basic starting point for a Node.js, React, and CSS application",
-  "author": "Julia McNeill",
+  "name": "virtual-scroll",
+  "description": "",
+  "author": "Matt Martin",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
@@ -20,6 +20,7 @@
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-papaparse": "^3.14.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.18.1",
     "webpack-cli": "^3.1.0",
