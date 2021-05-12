@@ -11,6 +11,9 @@ body {
   width: 600px;
   border: 1px solid black;
   overflow: scroll;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #table {
@@ -19,3 +22,9 @@ body {
 #table td {
   border-right: 1px solid grey
 }
+
+/* #blank {
+  height: 400px;
+  width: 600px;
+  border: 1px solid pink;
+} */
