@@ -3,6 +3,13 @@ This repo contains code for a table that uses virtual scrolling along the horizo
 
 Instructions to run:
 - Clone this repo
+- At the root directory, run `npm install --production`  
+- Run `npm run build`
+- Run `npm start`
+- Open `localhost:3000` in your browser (preferable Chrome)
+
+Instructions to run with Docker:
+- Clone this repo
 - Build a Docker image from the root directory: `docker build -t virtual-scroll .`  
 - Run the Docker container: `docker run --env PORT=<container_port> -p <host_port>:<container_port> virtual-scroll:latest`. E.g. `docker run --env PORT=3000 -p 3000:3000 virtual-scroll:latest`
   - A note on the run command: the express server will listen at `PORT`. Since we need to publish this port to an available port on the host machine, make sure `PORT`'s value matches the second port in the -p mapping.
