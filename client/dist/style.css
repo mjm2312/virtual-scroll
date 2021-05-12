@@ -37,10 +37,6 @@ th {
 
 }
 
-/* #table table, td, th {
-  border: 1px solid grey
-} */
-
 #table table, td, th {
   border: 1px solid #e4e7ed;
   padding-left: 10px;
@@ -52,10 +48,5 @@ table {
   width: 100%;
   table-layout: fixed;
   text-align: left;
+  display: inline-table;
 }
-
-/* #blank {
-  height: 400px;
-  width: 600px;
-  border: 1px solid pink;
-} */
