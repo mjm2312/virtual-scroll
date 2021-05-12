@@ -15,23 +15,18 @@ export default function printTable(xOffset, data, lastVisColRef, firstVisColRef)
               } if (i === (xOffset * NUM)) {
                 return (
                   <th ref={lastVisColRef}>
-                    {' '}
-                    RS
                     {key}
                   </th>
                 ); // need to adapt to this sol
               } if (i === ((xOffset - 1) * NUM) - 1) {
                 return (
                   <th>
-                    {' '}
                     {key}
                   </th>
                 ); // scrolling ltr, this is last value we saw, e.g. 20. repeat it again here for rtl scrolls.
               } if (i === ((xOffset - 1) * NUM) - 2) {
                 return (
                   <th ref={firstVisColRef}>
-                    {' '}
-                    hi left
                     {key}
                   </th>
                 ); // 1 value prior to last val (e.g. 19), so use it as sentinel
