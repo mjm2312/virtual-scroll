@@ -40,7 +40,7 @@ export default function App() {
       //console.log(container.scrollLeft);
       //console.log('width,', container.scrollWidth);
       //console.log(container.scrollWidth - container.scrollLeft)
-      console.log(container.scrollWidth - 600);
+      //console.log(container.scrollWidth - 600);
       setX(container.scrollLeft);
     },
     [x]
@@ -60,6 +60,8 @@ export default function App() {
     observer.current = new IntersectionObserver(entries => {
       //console.log('entries', entries);
       //console.log('entries[0]', entries[0]);
+      console.log('entries', entries[0]);
+
       if (entries[0].isIntersecting) {
         setxOffset(xOffset => xOffset + 1);
         //console.log('what is x during intersection', x);
@@ -68,7 +70,17 @@ export default function App() {
         viewportElement.current.scrollLeft += 200;
       }
     })
-    if (node) observer.current.observe(node)
+    //if (node) observer.current.observe(node)
+    const rows = document.querySelectorAll('.lastVisCol');
+    console.log('what is rows', rows);
+    if (rows) {
+      rows.forEach(row => {
+        observer.current.observe(row);
+      })
+    }
+
+
+
   }, [loading])
 
   const observer2 = useRef()
@@ -92,7 +104,14 @@ export default function App() {
         viewportElement.current.scrollLeft += 600; //use last scroll position instead of this
       }
     })
-    if (node) observer2.current.observe(node)
+    //if (node) observer2.current.observe(node)
+    const rows = document.querySelectorAll('.firstVisCol');
+    console.log('what is first rows', rows);
+    if (rows) {
+      rows.forEach(row => {
+        observer2.current.observe(row);
+      })
+    }
   }, [loading])
 
 
