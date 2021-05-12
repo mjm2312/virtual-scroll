@@ -1,26 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap");
-
 body {
-  font-family: "Work Sans", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
   margin: 20px;
-  color: #2c3e50;
+  color: #4a4a4a;
 }
 
 #table-container {
   height: 400px;
   width: 600px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   overflow: scroll;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#table {
+ td {
+  width: 150px;
+  height: 90px;
+  overflow-wrap: normal; 
+  word-break: break-all;
+  vertical-align: top;
+  padding-top: 10px;
 }
 
-#table td {
-  border-right: 1px solid grey
+.null-cell {
+  font-style: italic;
+  color: #909399;
+}
+
+th {
+  background-color: #f2f6fc;
+  width: 150px;
+  height: 30px;
+  font-weight: normal;
+
+}
+
+/* #table table, td, th {
+  border: 1px solid grey
+} */
+
+#table table, td, th {
+  border: 1px solid #e4e7ed;
+  padding-left: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
 }
 
 /* #blank {

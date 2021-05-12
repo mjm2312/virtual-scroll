@@ -9,7 +9,6 @@ import Papa from "papaparse";
 
 import React, { useState, useRef, useCallback, useEffect } from 'react'
 import printTable from './printTable.js'
-import { CSVDownloader } from "react-papaparse";
 
 export default function App() {
   const [query, setQuery] = useState('')
@@ -66,7 +65,7 @@ export default function App() {
         //console.log('what is x during intersection', x);
 
         viewportElement.current.scrollLeft = 0; //need this bc otherwise scrollbar stays in position that continuously reveals next intersectionObeserver ref
-        viewportElement.current.scrollLeft += 80;
+        viewportElement.current.scrollLeft += 200;
       }
     })
     if (node) observer.current.observe(node)
@@ -104,6 +103,7 @@ export default function App() {
       download: true,
       dynamicTyping: true,
       complete: function(results) {
+        console.log(results.data);
         setData([...data, ...results.data]);
         setLoading(false);
 
