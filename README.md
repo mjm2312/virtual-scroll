@@ -3,7 +3,7 @@ This repo contains code for a table that uses virtual scrolling along the horizo
 
 Instructions to run:
 - Clone this repo
-- At the root directory, run `npm install --production`  
+- At the root directory, run `npm install`  
 - Run `npm run build`
 - Run `npm start`
 - Open `localhost:3000` in your browser (preferable Chrome)
